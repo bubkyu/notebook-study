@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE 
+	mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.or.iei.repository.UserRepository">
+	<insert 
+		id = "createUser"
+		parameterType = "kr.or.iei.domain.User" >
+		INSERT 
+			INTO users(id, email, password, joinedDate)
+		VALUES(user_id_pk_seq.nextval,#{email},#{password},#{joinedDate})	
+	</insert>
+	
+	<select 
+		id = "findById"
+		resultType = "kr.or.iei.domain.User"
+	>
+	SELECT * FROM users WHERE id = #{id}
+	</select>
+	
+	<select 
+		id = "findAll"
+		resultType = "kr.or.iei.domain.User">
+	SELECT * FROM users
+	</select>
+	
+	<update 
+		id = "updateUser" 
+		parameterType = "kr.or.iei.domain.User" >
+		UPDATE users 
+			SET email =#{email}, password =#{password}
+		  WHERE id = #{id} 
+	</update>
+	
+	<delete id="deleteUser">
+		DELETE FROM users WHERE id = #{id}
+	</delete>
+	
+	
+</mapper>
+
