@@ -19,20 +19,23 @@
 
 
 # 1. 용어 정리
-
+라이브러리 VS 프레임워크
 * 라이브러리 : 제어 흐름이 개발자에게 있음.
 * 프레임워크 : 제어 흐름이 프레임워크에 있음.
 
 IoC(Inversion of Control)
 * 제어 역전
+
 ## 스프링의 역할
 * IoC Container
     * Bean : 스프링에서 관리하는 객체. 라이프사이클 존재.
-        * Component : 이 어노테이션이 붙으면 스프링이 관리함
-            * Controller
-            * RestController
-            * Service
-            * Repostory
+        * `@Component` : 이 어노테이션이 붙으면 스프링이 관리함
+            * `@Controller`
+            * `@RestController`
+            * `@Service`
+            * `@Repostory`
+        * `@Bean` 
+            -   주로 외부 라이브러리를 사용할 때 사용함.
         * 빈을 등록하는 과정
             * 스르핑 프레임워크가 시작되면 등록할 클래스를 탐색해서 (xml, Java Config(annotation))IoC 컨테이너 등록
         * 기본적으로 싱글톤임
@@ -64,6 +67,13 @@ IoC(Inversion of Control)
     - 저장과 관련된 인터페이스
     - 인터페이스 구현체
 
+    ## 2.0 의존성 주입
+
+    - 생성자 주입 방식
+    - `@Autowired`
+    - `@Inject`(deprecated)
+    
+    
     ## 2.1 컨트롤러
 
     이 레이어가 처리하는 일은 다음과 같다.
