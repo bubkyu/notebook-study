@@ -26,20 +26,20 @@
 
 
     ex) id = 'abc' 인 요소를 선택
+```javascript        
         javascript : var id = document.getElementById('abc');
         javascript funciont :
             var getID = function(id){
-                return document.getElementByid(id)'
+                return document.getElementById(id)'
             }
-            var id = getID('abc');
+            var id = getID('abc');  
     jquery : var id = $('#abc');
-
+```
 8. http://www.jquery.com
 
 
-
+# 
 CSS
-
 id : #ele {...} --> $(ele).css(key, value)
 class : .ele
 

@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<!--다룬로드 돈 라이브러리 사용함.  -->
+<!--다운로드 돈 라이브러리 사용함.  -->
 <script src='./lib/jquery-3.5.1.min.js'></script>
 
 </head>
